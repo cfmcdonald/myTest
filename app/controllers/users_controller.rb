@@ -25,6 +25,9 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
+	@user2 = User.find(2)
+	@user = @user2
+	@user2.delete
 
     respond_to do |format|
       format.html # new.html.erb
